@@ -1,0 +1,227 @@
+﻿<!DOCTYPE HTML>
+<html manifest="OfflineApp.appcache">
+<head>
+<meta charset="utf-8">
+<title>IamHere</title>
+<meta name="generator" content="NSB/AppStudio 6.2.5.0$gbkg" />
+<meta name='date' content='2017-06-05 23:49:15.807000' />
+<meta name='version' content='1.0.0' />
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+<meta name='apple-mobile-web-app-capable' content='YES' />
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta name='apple-mobile-web-app-title' content='I am Here' />
+<meta name='copyright' content='Copyright 2017 Ranseco Dot Com' />
+<meta http-equiv='Content-Security-Policy' content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src * blob:; img-src * data:; connect-src *;" />
+<link rel='apple-touch-icon' href='Resource/IamHere.jpg' />
+<link rel='shortcut icon' sizes='192x192' href='Resource/IamHere.jpg' />
+<link href="nsb/nsbstyle.css" rel="stylesheet">
+<script src="nsb/jquery.js"></script>
+<link href="nsb/jquery.modal.min.css" rel="stylesheet">
+<script src="nsb/hfunc.js"></script>
+<script src="nsb/jquery.modal.min.js"></script>
+<script src="nsb/nsbFunctions.js"></script>
+<link href="nsb/jquery.mobile.css" rel="stylesheet">
+<script src="nsb/jquery.mobile.js"></script>
+<script src="nsb/jqmFunctions.js"></script>
+
+<style type="text/css">
+#fmMain {background:inherit;}
+#ggMap {position:absolute; left:5px; right:auto; top:270px; bottom:auto; height:260px; width:348px;}
+#txtShowGet_wrapper {position:absolute; left:4px; right:auto; top:565px; bottom:auto; height:30px; width:190px;}
+#txtShowGet_wrapper {margin:0px; box-sizing:border-box;}
+#lblNameGet {position:absolute; left:5px; right:auto; top:539px; bottom:auto; height:23px; width:146px;}
+#lblShow {position:absolute; left:148px; right:auto; top:538px; bottom:auto; height:16px; width:45px;}
+#txtNameSend_wrapper {position:absolute; left:10px; right:auto; top:102px; bottom:auto; height:30px; width:137px;}
+#txtNameSend_wrapper {margin:0px; box-sizing:border-box;}
+#lblNameSendH {position:absolute; left:13px; right:auto; top:80px; bottom:auto; height:23px; width:146px;}
+#lblNameSendF {position:absolute; left:13px; right:auto; top:199px; bottom:auto; height:18px; width:196px;}
+#lblMinute {position:absolute; left:6px; right:auto; top:7px; bottom:auto; height:23px; width:203px;}
+#txtMinute_wrapper {position:absolute; left:8px; right:auto; top:30px; bottom:auto; height:35px; width:188px;}
+#txtMinute_wrapper {margin:0px; box-sizing:border-box;}
+#txtRaw {position:absolute; left:212px; right:auto; top:102px; bottom:auto; height:110px; width:141px;}
+#lblRaw {position:absolute; left:220px; right:auto; top:78px; bottom:auto; height:23px; width:124px;}
+#btShow {position:absolute; left:207px; right:auto; top:537px; bottom:auto; height:57px; width:145px;}
+#btSend {position:absolute; left:211px; right:auto; top:221px; bottom:auto; height:39px; width:144px;}
+#btHide {position:absolute; left:8px; right:auto; top:221px; bottom:auto; height:40px; width:188px;}
+#lblAuto {position:absolute; left:225px; right:auto; top:7px; bottom:auto; height:23px; width:105px;}
+#rbAuto {position:absolute; left:220px; right:auto; top:28px; bottom:auto; height:17px; width:121px;}
+#rbName {position:absolute; left:10px; right:auto; top:162px; bottom:auto; height:14px; width:198px;}
+#lblNameSendM {position:absolute; left:13px; right:auto; top:143px; bottom:auto; height:20px; width:182px;}
+#txtPassword_wrapper {position:absolute; left:152px; right:auto; top:102px; bottom:auto; height:30px; width:42px;}
+#txtPassword_wrapper {margin:0px; box-sizing:border-box;}
+</style>
+
+</head>
+<body style="margin:0px;-ms-touch-action:none;font-family:-apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue';">
+<noscript><h1>JavaScript must be enabled!</h1></noscript>
+<div data-role="page" id="NSBPage" data-theme="a" style="position:absolute; width:100%; height:100%; background-color:inherit; ">
+<a name='/fmMain' data-role=none></a>
+<div id="fmMain" class="nsb-form" style="position:absolute; display:none; height: 600px; top:0px; left:0px; width:370px; ">
+<script>
+fmMain.innerHTML=["",  "<div id=ggMap style='background:#F0FFFF;' class=''></div>",
+  "<input id='txtShowGet' type='text' name='' autocorrect='off' autocomplete='off' autocapitalize='off' maxlength=20 step=any value='' placeholder='Enter &quot;Partner Name&quot; here' data-nsb-type='TextBox_jqm'   style='text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblNameGet' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:13px; font-weight:bold; '>Name for Showing</div>",
+  "<div id='lblShow' class='' data-nsb-type=Label style='cursor:default;text-align:center; text-shadow:none; font-size:14px; background-color:#FFFF00; '>^ . ^ . ^</div>",
+  "<input id='txtNameSend' type='text' name='' autocorrect='off' autocomplete='off' autocapitalize='off' maxlength=20 step=any value='' placeholder='Enter &quot;Output Name&quot;' data-nsb-type='TextBox_jqm'   style='text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblNameSendH' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:13px; font-weight:bold; '>Name to send out (ID)</div>",
+  "<div id='lblNameSendF' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:11px; color:#808080; '>Press 3 Times & Long Press for SET</div>",
+  "<div id='lblMinute' class='' data-nsb-type=Label style='cursor:default;text-align:center; text-shadow:none; font-size:13px; font-weight:bold; '>Update Section (Minute 1-600)</div>",
+  "<input id='txtMinute' type='number' name='' autocorrect='off' autocomplete='off' autocapitalize='off' maxlength=3 min='1' max='600' step=any value='' placeholder='Default - 30 Minute' data-nsb-type='TextBox_jqm'   style='text-align:center; text-shadow:none;' class=' ui-mini  '>",
+  "<textarea id='txtRaw' class=' ui-mini  ' data-corners=false name='' style='display:block; margin-top:0px; text-align:left; font-size:13px; background-color:#E0E0E0; overflow-scrolling:touch; max-height:auto; text-shadow:none; '  autocorrect='off'  autocomplete='off' autocapitalize='off' data-autogrow=false readonly=\'readonly\' placeholder=''></textarea>",
+  "<div id='lblRaw' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:13px; font-weight:bold; '>RAW Data</div>",
+  "<button id='btShow' class='ui-btn ui-mini ui-corner-all ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; ' data-nsb-type=Button_jqm>SHOW - Other Side</button>",
+  "<button id='btSend' class='ui-btn ui-mini ui-corner-all ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; ' data-nsb-type=Button_jqm>SEND - One Time</button>",
+  "<button id='btHide' class='ui-btn ui-mini ui-corner-all ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; ' data-nsb-type=Button_jqm>HIDE - Stop Output</button>",
+  "<div id='lblAuto' class='' data-nsb-type=Label style='cursor:default;text-align:center; text-shadow:none; font-size:13px; font-weight:bold; '>Auto Update</div>",
+  NSB.RadioButton_jqm('rbAuto', '121', 'Stop,Start', '1', '', 'data-type=horizontal data-mini=true', '', ' ', 'true', 'left'),
+  NSB.RadioButton_jqm('rbName', '198', '( 1 ),( 2 ),( 3 ),( 4 )', '0', '', 'data-type=horizontal data-mini=true', '', ' ', 'true', 'left'),
+  "<div id='lblNameSendM' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:13px; font-weight:bold; color:#808080; '>Auto Fill Name (Other Side)</div>",
+  "<input id='txtPassword' type='text' name='' autocorrect='off' autocomplete='off' autocapitalize='off' maxlength=20 step=any value='' placeholder='ID' data-nsb-type='TextBox_jqm'   style='text-align:center; text-shadow:none;' class=' ui-mini  '>",
+  ].join('');
+</script>
+</div>
+</div>
+<script>
+if(!navigator.cookieEnabled) NSB.MsgBox('Please turn cookies on.');
+(function(){var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)if(all[i].id!=''&&typeof all[i].id!='undefined'&&typeof window[all[i].id]=='undefined')window[all[i].id]=all[i];})()
+var NSB = NSB || {};
+NSB.currentForm = fmMain;
+NSB.stopOnError = true;
+NSB.enableBrowserArrows = false;
+NSB.enableAppScroll = false;
+NSB.newVersionWarning = false;
+NSB.id = 'Project1';
+NSB.voltAppId = '';
+NSB.voltDashboardAccess = False;
+NSB.voltDomain = '';
+if ($.mobile != undefined) $.mobile.hashListeningEnabled = false;
+
+// ***** Code for form: fmMain *****
+fmMain.onresize = function() {NSB.zoomScreen(fmMain)};
+window.addEventListener('load', function() {
+  fmMain.style.display = 'block';
+  fmMain.onresize(fmMain);
+  NSB.addProperties(fmMain);
+  if (navigator.onLine != false) {
+      var script = document.createElement('script');
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC9bxdNxNiH0_bczuoVpzdUvz4wfDh4GRM&v=3.exp&callback=ggMap.refresh';
+      document.head.appendChild(script, script.src);
+  }
+  NSB.addProperties(ggMap);
+  ggMap.mapOptions={
+    disableDefaultUI: False,
+    disableDoubleClickZoom: True,
+    draggable: True,
+    draggableCursor: '',
+    draggingCursor: '',
+    heading: 0,
+    keyboardShortcuts: True,
+    latitude: '22.34',
+    longitude: '114.19',
+    mapMaker: False,
+    mapTypeId: 'roadmap',
+    maxZoom: 20,
+    noClear: False,
+    scrollwheel: True,
+    streetViewControl: True,
+    tilt: 0,
+    zoom: 16,
+    zoomControl: True,
+    };
+  ggMap.setMarker = NSB.GoogleMapSetMarker;
+  ggMap.refresh = NSB.GoogleMapRefresh;
+  ggMap.setInfoWindow = NSB.GoogleMapSetInfoWindow;
+  gMapsLoaded = function(){console.log('gMapsLoaded');ggMap.refresh()};
+  txtShowGet.parentElement.id = 'txtShowGet_wrapper';
+  txtShowGet_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtShowGet.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtShowGet, txtShowGet_wrapper);
+  $('#txtShowGet_wrapper').removeClass('ui-shadow-inset');
+  $('#txtShowGet_wrapper').removeClass('ui-corner-all');
+  txtShowGet.style.height = (txtShowGet.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtShowGet);
+
+  NSB.addProperties(lblNameGet);
+
+  NSB.addProperties(lblShow);
+  txtNameSend.parentElement.id = 'txtNameSend_wrapper';
+  txtNameSend_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtNameSend.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtNameSend, txtNameSend_wrapper);
+  $('#txtNameSend_wrapper').removeClass('ui-shadow-inset');
+  $('#txtNameSend_wrapper').removeClass('ui-corner-all');
+  txtNameSend.style.height = (txtNameSend.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtNameSend);
+
+  NSB.addProperties(lblNameSendH);
+
+  NSB.addProperties(lblNameSendF);
+
+  NSB.addProperties(lblMinute);
+  txtMinute.parentElement.id = 'txtMinute_wrapper';
+  txtMinute_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMinute.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMinute, txtMinute_wrapper);
+  $('#txtMinute_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMinute_wrapper').removeClass('ui-corner-all');
+  txtMinute.style.height = (txtMinute.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMinute);
+  txtRaw.ontouchmove=function(e){e.stopPropagation()};
+  NSB.addProperties(txtRaw);
+  $('#txtRaw').removeClass('ui-shadow-inset');
+
+  NSB.addProperties(lblRaw);
+  NSB.addDisableProperty(btShow);
+  NSB.addProperties(btShow);
+  NSB.addDisableProperty(btSend);
+  NSB.addProperties(btSend);
+  NSB.addDisableProperty(btHide);
+  NSB.addProperties(btHide);
+
+  NSB.addProperties(lblAuto);
+  NSB.RadioButton_jqm_init('rbAuto','121');
+  if (17>0) {
+    if ('data-type=horizontal'=='') {
+      $('#rbAuto .ui-btn').css('height','17'/rbAuto.getItemCount()) }
+    else $('#rbAuto .ui-btn').css('height','17') }
+  NSB.defineProperty(rbAuto, 'Height', {set: function(h){if ('data-type=horizontal'=='') {
+      $('#rbAuto .ui-btn').css('height',h/rbAuto.getItemCount()) }
+    else $('#rbAuto .ui-btn').css('height',h) }, get: function(){return parseInt($('#rbAuto').css('height'))}})
+  try{NSB.addProperties(rbAuto,undefined,true);}catch(e){console.log('error:' + e.message)}
+  NSB.RadioButton_jqm_init('rbName','198');
+  if (14>0) {
+    if ('data-type=horizontal'=='') {
+      $('#rbName .ui-btn').css('height','14'/rbName.getItemCount()) }
+    else $('#rbName .ui-btn').css('height','14') }
+  $('#rbName .ui-btn').css('font-size','12px');
+  NSB.defineProperty(rbName, 'Height', {set: function(h){if ('data-type=horizontal'=='') {
+      $('#rbName .ui-btn').css('height',h/rbName.getItemCount()) }
+    else $('#rbName .ui-btn').css('height',h) }, get: function(){return parseInt($('#rbName').css('height'))}})
+  try{NSB.addProperties(rbName,undefined,true);}catch(e){console.log('error:' + e.message)}
+
+  NSB.addProperties(lblNameSendM);
+  txtPassword.parentElement.id = 'txtPassword_wrapper';
+  txtPassword_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtPassword.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtPassword, txtPassword_wrapper);
+  $('#txtPassword_wrapper').removeClass('ui-shadow-inset');
+  $('#txtPassword_wrapper').removeClass('ui-corner-all');
+  txtPassword.style.height = (txtPassword.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtPassword);
+  fmMain.style.display = 'none';
+}, false);
+
+
+window.addEventListener('orientationchange', function(){window.scrollTo(0,0)});
+window.addEventListener('load', function() {
+  browserWarningMessage('Please use Google Chrome, Apple Safari or another supported browser.');
+  fmMain.style.display = 'block';
+  Main();
+  if (typeof(fmMain.onshow)=='function') fmMain.onshow();
+}, false);
+</script>
+<script src='code.js'></script>
+
+</body>
+</html>
